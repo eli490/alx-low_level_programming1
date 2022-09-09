@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success/correct)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -27,6 +27,6 @@ int main(void)
 	{
 		printf("Last digit of %i is %i and is greater than 5\n", n, ld);
 	}
-	return (0)
+	return (0);
 }
 	
