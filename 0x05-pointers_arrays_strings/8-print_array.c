@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_array - it prints array
- * @*a: print int
+ * @a: print int
  * @n: print int
  * Return: Always 0.
  */
