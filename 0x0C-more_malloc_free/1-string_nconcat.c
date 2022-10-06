@@ -3,50 +3,47 @@
  * string_nconcat - concatenates two strings
  * @s1: pointer to 1st string
  * @s2: pointer to 2nd string
- * @n: bytes in s2 to be concatenated with s1.
- * Return: pointer to the new string.
+ * @n: index
+ * Return: char pointer
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *p = NULL, *p_tmp = NULL;
-	unsigned int len1, len2;
+	char *p;
+	unsigned int size1 = 0, size2 = 0, i;
 
-	int len_of_str(char *str);
-	len1 = len_of_str(s1);
-	len2 = len_of_str(s2);
+	if (s1 == NULL)
+		s1 = "";
 
-	if (len2 > n)
-		len2 = n;
+	if (s2 == NULL)
+		s2 = "";
 
-	p_tmp = p = malloc(sizeof(char) * (len1 + len2 + 1));
-	if (p_tmp == NULL)
-		return (NULL);
+	while (s1[size1] != '\0')
+	{
+		size1++;
+	}
 
-	while (*s1)
-		*p_tmp++ = *s1++;
+	while (s2[size2] != '\0')
+	{
+		size2++;
+	}
 
-	while (len2--)
-		*p_tmp++ = *s2++;
+	if (n > size2)
+	n = size2;
+	p = malloc((size1 + n + 1) * sizeof(char));
 
-	*p_tmp = '\0';
+	if (p == NULL)
+		return (0);
 
-	return (p);
-}
+	for (i = 0; i < size1; i++)
+	{
+		p[i] = s1[i];
+	}
 
-/**
- * len_of_str - returns string length
- * @str: string whose length is to be returned
- * Return: string length.
- */
-int len_of_str(char *str)
-{
-	int len = 0;
-
-	if (!str)
-		str = "";
-
-	while (*str++)
-		lenn++;
-	return (len);
+	for (; i < (size1 + n); i++)
+	{
+		p[i] = s2[i - size1];
+	}
+	p[i] = '0\'
+return (p);
 }
