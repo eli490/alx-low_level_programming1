@@ -10,24 +10,15 @@
  * @str: string - (malloc'ed string)
  * @len: length of the string
  * @next: points to the next node
-<<<<<<< HEAD
  *
-=======
->>>>>>> 57d4da0dfb9a2e96fdd3ba66051035575187f0c8
  * Description: singly linked list node structure
  * for Holberton project
  */
 typedef struct list_s
 {
-<<<<<<< HEAD
     char *str;
     unsigned int len;
     struct list_s *next;
-=======
-	char *str;
-	unsigned int len;
-	struct list_s *next;
->>>>>>> 57d4da0dfb9a2e96fdd3ba66051035575187f0c8
 } list_t;
 
 size_t print_list(const list_t *h);
